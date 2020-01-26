@@ -37,7 +37,7 @@ class _CatalogState extends State<Catalog> {
   }
   
   Widget _buildItem(Item item, List<Item> itemList, CartBloc cartBloc) {
-    final isChecked = itemList.contains(item);
+    final isChecked = (itemList == null) ? false : itemList.contains(item);
 
     return Padding(
       child: ListTile(

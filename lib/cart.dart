@@ -21,7 +21,7 @@ class _CartState extends State<Cart> {
         builder: (context, snapshot) {
           var sum = 0;
 
-          if (snapshot.data.length > 0) {
+          if (snapshot.hasData) {
             sum = snapshot.data
                 .map((item) => item.price)
                 .reduce((acc, e) => acc + e);
